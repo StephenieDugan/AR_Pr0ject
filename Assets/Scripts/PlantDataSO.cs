@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlantDataSO : ScriptableObject
 {
     [SerializeField] private string plantName = "plant";
-    [SerializeField] private GameObject[] growthModels;
+    [SerializeField] private Mesh[] growthMeshes;
 
     public ProduceDataSO myProduceData;
 
-    public GameObject getPlantModel(int index)
+    public Mesh getPlantMesh(int index)
     {
-        return growthModels[index];
+        return growthMeshes[index];
     }
 }
