@@ -4,5 +4,10 @@ using UnityEngine;
 public class ProduceDataSO : ScriptableObject
 {
 	[SerializeField] private string produceName = "produce";
-	[SerializeField] private GameObject[] growthModels;
+	[SerializeField] private Mesh[] growthMeshes;
+
+	public Mesh getProduceMesh(int index)
+	{
+		return growthMeshes[index];
+	}
 }
