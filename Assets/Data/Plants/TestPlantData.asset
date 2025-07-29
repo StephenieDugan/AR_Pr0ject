@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlantDataSO
   plantName: testPlant
   growthMeshes:
+  - {fileID: 7893223238252643796, guid: 6425590653bb7fd43a391a098ae3d1bd, type: 3}
   - {fileID: 3827807625692864227, guid: a754e64489f3fc54394c74260fcf9010, type: 3}
   - {fileID: 1856033025969830687, guid: 12ee16da34a4774469c0707381c85627, type: 3}
   - {fileID: -7462464250774027930, guid: d3cede648a8d23e4b970f024927ed262, type: 3}
