@@ -1667,7 +1667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac0a50500cd8794c922d26923ce034b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProduceLocation
-  produceAtLocation: {fileID: 0}
 --- !u!4 &497040639
 Transform:
   m_ObjectHideFlags: 0
@@ -5228,8 +5227,8 @@ MonoBehaviour:
   producePrefab: {fileID: 3996779109262460089, guid: aea9f66577193154299436f274291bc4,
     type: 3}
   maxProducesCount: 2
-  produceMinTimeBetweenGrowth: 7
-  produceMaxTimeBetweenGrowth: 15
+  produceMinTimeBetweenGrowth: 2
+  produceMaxTimeBetweenGrowth: 6
 --- !u!1 &1309057132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,7 +5977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac0a50500cd8794c922d26923ce034b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProduceLocation
-  produceAtLocation: {fileID: 0}
 --- !u!4 &1411462099
 Transform:
   m_ObjectHideFlags: 0
