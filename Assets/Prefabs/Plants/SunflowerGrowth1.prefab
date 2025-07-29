@@ -152,7 +152,7 @@ MonoBehaviour:
   consumptionRate: 1.2
   growthAges: 0100000002000000030000000400000005000000
   growthStage: 0
-  growthRate: 0.7
+  growthRate: 10
   maxGrowthRate: 22
   myPlantData: {fileID: 11400000, guid: e1a2209b4e7585e4d981293a97ce0505, type: 2}
   produceGrowLocations:
@@ -163,3 +163,4 @@ MonoBehaviour:
   maxProducesCount: 1
   produceMinTimeBetweenGrowth: 1
   produceMaxTimeBetweenGrowth: 1
+  maxHarvestAmount: 1

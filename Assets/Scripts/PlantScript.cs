@@ -73,8 +73,7 @@ public class PlantScript : MonoBehaviour
 			else
 			{
 				// spawn produce at this location
-				GameObject newProduce = Instantiate(producePrefab, growLocation.transform.position, Quaternion.identity);
-				newProduce.transform.SetParent(growLocation.transform); // set the parent to the grow location
+				GameObject newProduce = Instantiate(producePrefab, growLocation.transform.position, Quaternion.identity, growLocation.transform);
 				newProduce.GetComponent<ProduceScript>().locationIndex = System.Array.IndexOf(produceGrowLocations, growLocation); // set the location index for the produce
 				ProduceScript produceScript = newProduce.GetComponent<ProduceScript>();
 				produces.Add(produceScript); // add the produce to the list

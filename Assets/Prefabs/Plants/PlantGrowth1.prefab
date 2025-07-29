@@ -110,7 +110,7 @@ MonoBehaviour:
   consumptionRate: 0.7
   growthAges: 020000000300000005000000080000000d000000
   growthStage: 0
-  growthRate: 0.6
+  growthRate: 10
   maxGrowthRate: 11
   myPlantData: {fileID: 11400000, guid: a0ef45d57fcc8914db5fce143abdade7, type: 2}
   produceGrowLocations:
@@ -120,9 +120,10 @@ MonoBehaviour:
   produces: []
   producePrefab: {fileID: 3996779109262460089, guid: aea9f66577193154299436f274291bc4,
     type: 3}
-  maxProducesCount: 0
+  maxProducesCount: 3
   produceMinTimeBetweenGrowth: 1
   produceMaxTimeBetweenGrowth: 10
+  maxHarvestAmount: 5
 --- !u!1 &5052004097711707268
 GameObject:
   m_ObjectHideFlags: 0
