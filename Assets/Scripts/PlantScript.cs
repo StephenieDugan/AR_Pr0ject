@@ -20,6 +20,8 @@ public class PlantScript : MonoBehaviour
 	[SerializeField] private float produceMinTimeBetweenGrowth = 1; // minimum time between produce growth in seconds
 	[SerializeField] private float produceMaxTimeBetweenGrowth = 10; // maximum time between produce growth in seconds
 	private bool addingProduce = false; // flag to check if we are currently adding produce
+	[SerializeField] private int maxHarvestAmount; // maximum amount of produce that can be harvested before plant is destroyed
+	private int harvestCount = 0; // count of how many produce have been harvested
 
 	public void PlantUpdate()
 	{
@@ -39,6 +41,7 @@ public class PlantScript : MonoBehaviour
 				if (produce.harvested)
 				{
 					// if the produce has been harvested, remove it from the list and destroy it
+					harvestCount++; // increment the harvest count
 					produceGrowLocations[produce.locationIndex].isOccupied = false; // mark the location as not occupied
 					produces.Remove(produce);
 					Destroy(produce.gameObject);
@@ -50,6 +53,14 @@ public class PlantScript : MonoBehaviour
 					produce.ProduceUpdate();
 				}
 			}
+		}
+
+		if (harvestCount >= maxHarvestAmount)
+		{
+			// destroy the plant if the harvest count exceeds the maximum harvest amount
+			
+			Destroy(gameObject);
+			return;
 		}
 	}
 
