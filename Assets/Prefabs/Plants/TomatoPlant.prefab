@@ -236,11 +236,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlantScript
   age: 0
   water: 0
-  consumptionRate: 0
+  consumptionRate: 0.7
   growthAges: 020000000400000006000000080000000a000000
   growthStage: 0
-  growthRate: 1
-  maxGrowthRate: 10
+  growthRate: 0.6
+  maxGrowthRate: 11
   myPlantData: {fileID: 11400000, guid: a0ef45d57fcc8914db5fce143abdade7, type: 2}
   produceGrowLocations:
   - {fileID: 5864343012525294845}
@@ -249,7 +249,7 @@ MonoBehaviour:
   produces: []
   producePrefab: {fileID: 3996779109262460089, guid: aea9f66577193154299436f274291bc4,
     type: 3}
-  maxProducesCount: 0
+  maxProducesCount: 3
   produceMinTimeBetweenGrowth: 7
   produceMaxTimeBetweenGrowth: 15
 --- !u!1 &7509917724272386201
