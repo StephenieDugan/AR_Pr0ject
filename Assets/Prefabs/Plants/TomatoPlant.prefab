@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 5594565607776216297}
   - component: {fileID: 6475302733990480186}
   - component: {fileID: 4211184740379078846}
-  - component: {fileID: 1952602212795700382}
   m_Layer: 0
   m_Name: PlantGrowth1
   m_TagString: Untagged
@@ -222,36 +221,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1952602212795700382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5705861811221648578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6c3bc59aae84743ab2ba340e2e41d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlantScript
-  age: 0
-  water: 0
-  consumptionRate: 0.7
-  growthAges: 020000000400000006000000080000000a000000
-  growthStage: 0
-  growthRate: 0.6
-  maxGrowthRate: 11
-  myPlantData: {fileID: 11400000, guid: a0ef45d57fcc8914db5fce143abdade7, type: 2}
-  produceGrowLocations:
-  - {fileID: 5864343012525294845}
-  - {fileID: 7502206678366011659}
-  - {fileID: 931196727537675957}
-  produces: []
-  producePrefab: {fileID: 3996779109262460089, guid: aea9f66577193154299436f274291bc4,
-    type: 3}
-  maxProducesCount: 3
-  produceMinTimeBetweenGrowth: 7
-  produceMaxTimeBetweenGrowth: 15
 --- !u!1 &7509917724272386201
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5243259221503922824}
+  - component: {fileID: 4098352848865022194}
   m_Layer: 0
   m_Name: TomatoPlant
   m_TagString: Untagged
@@ -287,3 +257,33 @@ Transform:
   - {fileID: 5976423367435653039}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4098352848865022194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509917724272386201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6c3bc59aae84743ab2ba340e2e41d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantScript
+  age: 0
+  water: 0
+  consumptionRate: 0.7
+  growthAges: 020000000400000006000000080000000a000000
+  growthStage: 0
+  growthRate: 0.6
+  maxGrowthRate: 11
+  myPlantData: {fileID: 11400000, guid: a0ef45d57fcc8914db5fce143abdade7, type: 2}
+  produceGrowLocations:
+  - {fileID: 5864343012525294845}
+  - {fileID: 7502206678366011659}
+  - {fileID: 931196727537675957}
+  produces: []
+  producePrefab: {fileID: 3996779109262460089, guid: aea9f66577193154299436f274291bc4,
+    type: 3}
+  maxProducesCount: 3
+  produceMinTimeBetweenGrowth: 7
+  produceMaxTimeBetweenGrowth: 15

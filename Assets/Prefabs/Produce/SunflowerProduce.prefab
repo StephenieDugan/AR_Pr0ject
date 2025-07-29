@@ -50,4 +50,4 @@ MonoBehaviour:
   growthAges: 
   harvest: 0
   maxGrowthRate: 0
-  myProduceData: {fileID: 0}
+  myProduceData: {fileID: 11400000, guid: 9fe0f6d56686a3940aa1d387b1b38979, type: 2}
