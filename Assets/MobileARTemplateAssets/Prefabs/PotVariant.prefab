@@ -20,13 +20,19 @@ PrefabInstance:
     - target: {fileID: 613292779795284151, guid: ebd7292e888c84f05924605e51048072,
         type: 3}
       propertyPath: m_Name
-      value: CubeVariant
+      value: PotVariant
       objectReference: {fileID: 0}
+    - target: {fileID: 2183264984513196492, guid: ebd7292e888c84f05924605e51048072,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3562493664714919950, guid: 9d355817f83b2de488e53caf13751148,
+        type: 3}
     - target: {fileID: 3471538223933167219, guid: ebd7292e888c84f05924605e51048072,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 83eabfe673263a445972586e5d8b56ee, type: 2}
+      objectReference: {fileID: 2100000, guid: bcaef9a7af8383a4b92981a2fcc60224, type: 2}
     - target: {fileID: 3900644259840735266, guid: ebd7292e888c84f05924605e51048072,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,6 +83,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6851024864616975279, guid: ebd7292e888c84f05924605e51048072,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3562493664714919950, guid: 9d355817f83b2de488e53caf13751148,
+        type: 3}
     - target: {fileID: 7357653953804275573, guid: ebd7292e888c84f05924605e51048072,
         type: 3}
       propertyPath: m_MinScale
