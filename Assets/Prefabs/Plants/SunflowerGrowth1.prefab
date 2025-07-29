@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &815730417720996292
+--- !u!1 &2880322610472515822
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,61 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 366735787914408888}
-  - component: {fileID: 2682635515166231901}
+  - component: {fileID: 42906997738399252}
+  - component: {fileID: 2662227671818052188}
   m_Layer: 0
-  m_Name: SunflowerPlant
+  m_Name: GrowLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &366735787914408888
+--- !u!4 &42906997738399252
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815730417720996292}
+  m_GameObject: {fileID: 2880322610472515822}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.173, y: 2.763, z: 0.158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 9059395616712138284}
-  - {fileID: 6254217630071526805}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 3164462854429404589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2682635515166231901
+--- !u!114 &2662227671818052188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815730417720996292}
+  m_GameObject: {fileID: 2880322610472515822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6c3bc59aae84743ab2ba340e2e41d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ac0a50500cd8794c922d26923ce034b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlantScript
-  age: 0
-  water: 0
-  consumptionRate: 1.2
-  growthAges: 0100000002000000030000000400000005000000
-  growthStage: 0
-  growthRate: 0.7
-  maxGrowthRate: 22
-  myPlantData: {fileID: 11400000, guid: e1a2209b4e7585e4d981293a97ce0505, type: 2}
-  produceGrowLocations:
-  - {fileID: 8259953104432878045}
-  produces: []
-  producePrefab: {fileID: 8060688157519563876, guid: e82f3f380860f5f4dbbf853e4036fac9,
-    type: 3}
-  maxProducesCount: 1
-  produceMinTimeBetweenGrowth: 1
-  produceMaxTimeBetweenGrowth: 1
---- !u!1 &1600323340023614730
+  m_EditorClassIdentifier: Assembly-CSharp::ProduceLocation
+--- !u!1 &4640506395558067851
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,9 +52,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9059395616712138284}
-  - component: {fileID: 3476747829672271659}
-  - component: {fileID: 4013855900733265544}
+  - component: {fileID: 3164462854429404589}
+  - component: {fileID: 7380552996658916522}
+  - component: {fileID: 7054619227021026569}
+  - component: {fileID: 4309705197845454575}
   m_Layer: 0
   m_Name: SunflowerGrowth1
   m_TagString: Untagged
@@ -80,36 +63,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9059395616712138284
+--- !u!4 &3164462854429404589
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600323340023614730}
+  m_GameObject: {fileID: 4640506395558067851}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 366735787914408888}
+  m_Children:
+  - {fileID: 42906997738399252}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3476747829672271659
+--- !u!33 &7380552996658916522
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600323340023614730}
+  m_GameObject: {fileID: 4640506395558067851}
   m_Mesh: {fileID: -6947946313604736314, guid: 8e362ba70488d5a4e9bde24c00a8255d, type: 3}
---- !u!23 &4013855900733265544
+--- !u!23 &7054619227021026569
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600323340023614730}
+  m_GameObject: {fileID: 4640506395558067851}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -151,47 +135,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8190895729972611951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6254217630071526805}
-  - component: {fileID: 8259953104432878045}
-  m_Layer: 0
-  m_Name: GrowLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6254217630071526805
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8190895729972611951}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.173, y: 2.763, z: 0.158}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 366735787914408888}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8259953104432878045
+--- !u!114 &4309705197845454575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8190895729972611951}
+  m_GameObject: {fileID: 4640506395558067851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac0a50500cd8794c922d26923ce034b, type: 3}
+  m_Script: {fileID: 11500000, guid: aa6c3bc59aae84743ab2ba340e2e41d3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProduceLocation
+  m_EditorClassIdentifier: Assembly-CSharp::PlantScript
+  age: 0
+  water: 0
+  consumptionRate: 1.2
+  growthAges: 0100000002000000030000000400000005000000
+  growthStage: 0
+  growthRate: 0.7
+  maxGrowthRate: 22
+  myPlantData: {fileID: 11400000, guid: e1a2209b4e7585e4d981293a97ce0505, type: 2}
+  produceGrowLocations:
+  - {fileID: 2662227671818052188}
+  produces: []
+  producePrefab: {fileID: 8060688157519563876, guid: e82f3f380860f5f4dbbf853e4036fac9,
+    type: 3}
+  maxProducesCount: 1
+  produceMinTimeBetweenGrowth: 1
+  produceMaxTimeBetweenGrowth: 1
