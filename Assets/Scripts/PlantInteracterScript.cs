@@ -8,7 +8,6 @@ public class PlantInteracterScript : MonoBehaviour
 	{
 		if (Input.touchCount > 0)
 		{
-			Debug.Log(Input.touchCount);
 			Touch t = Input.GetTouch(0);
 			if (t.phase == TouchPhase.Began)
 			{
@@ -21,7 +20,6 @@ public class PlantInteracterScript : MonoBehaviour
 				if (hit.rigidbody)
 				{
 					ProduceScript produceHit = hit.rigidbody.GetComponent<ProduceScript>();
-					Debug.Log(produceHit);
 
 					produceHit.TryHarvest();
 				}
