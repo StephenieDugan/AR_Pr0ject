@@ -66,7 +66,6 @@ public class ProduceScript : MonoBehaviour
 
 	public void TryHarvest()
 	{
-		Debug.Log(name + " Is trying to be Harvested");
 		if (maxAge || growthAges.Length == 0)
 		{
 			Harvest();
@@ -75,7 +74,6 @@ public class ProduceScript : MonoBehaviour
 
 	private void Harvest()
 	{
-		Debug.Log(name + " Is going to be harvested");
 		harvested = true; // mark the produce as harvested
 		Inventory.Instance.Currency += produceValue; // add the produce value to the inventory currency
 	}
