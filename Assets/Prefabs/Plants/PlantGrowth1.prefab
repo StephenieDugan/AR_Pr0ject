@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7903892842791846112}
   m_Layer: 0
   m_Name: PlantGrowth1
-  m_TagString: Untagged
+  m_TagString: TomatoSeeds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4330821848861070427}
   - {fileID: 972215316086799159}
@@ -106,11 +106,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlantScript
   age: 0
+  maxWater: 0
   water: 0
   consumptionRate: 0.7
   growthAges: 020000000300000005000000080000000d000000
   growthStage: 0
-  growthRate: 0.6
+  growthRate: 10
   maxGrowthRate: 11
   myPlantData: {fileID: 11400000, guid: a0ef45d57fcc8914db5fce143abdade7, type: 2}
   produceGrowLocations:
@@ -120,9 +121,11 @@ MonoBehaviour:
   produces: []
   producePrefab: {fileID: 3996779109262460089, guid: aea9f66577193154299436f274291bc4,
     type: 3}
-  maxProducesCount: 0
+  maxProducesCount: 3
   produceMinTimeBetweenGrowth: 1
   produceMaxTimeBetweenGrowth: 10
+  maxHarvestAmount: 5
+  fertilizeAmount: 0
 --- !u!1 &5052004097711707268
 GameObject:
   m_ObjectHideFlags: 0

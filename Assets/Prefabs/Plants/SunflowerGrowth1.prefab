@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4309705197845454575}
   m_Layer: 0
   m_Name: SunflowerGrowth1
-  m_TagString: Untagged
+  m_TagString: SunFlowerSeeds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,11 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlantScript
   age: 0
+  maxWater: 0
   water: 0
   consumptionRate: 1.2
   growthAges: 0100000002000000030000000400000005000000
   growthStage: 0
-  growthRate: 0.7
+  growthRate: 10
   maxGrowthRate: 22
   myPlantData: {fileID: 11400000, guid: e1a2209b4e7585e4d981293a97ce0505, type: 2}
   produceGrowLocations:
@@ -163,3 +164,5 @@ MonoBehaviour:
   maxProducesCount: 1
   produceMinTimeBetweenGrowth: 1
   produceMaxTimeBetweenGrowth: 1
+  maxHarvestAmount: 1
+  fertilizeAmount: 0

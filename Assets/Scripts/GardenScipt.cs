@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GardenScipt : MonoBehaviour
 {
-    [SerializeField] private List<PlantScript> plants;
+    [SerializeField] public List<PlantScript> plants;
 
 	void Update()
     {
@@ -26,10 +26,11 @@ public class GardenScipt : MonoBehaviour
         // Update the plants using the PlantUpdate method. so this object is sync in updates with its plant
     }
 
-    public void AddPlant()
+    public void AddPlant(PlantScript newPlant)
     {
         // for adding a plant to the garden plot
         // please use the BasePrefab.basePlantPrefab
+        plants.Add(newPlant);
     }
 
     public void WaterPlant()
