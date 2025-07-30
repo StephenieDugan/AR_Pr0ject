@@ -269,6 +269,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &72725658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72725660}
+  - component: {fileID: 72725659}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &72725659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72725658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da6b83d335e2e442a81700ead71db79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantInteracterScript
+  whoIHit:
+    serializedVersion: 2
+    m_Bits: 32768
+--- !u!4 &72725660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72725658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.12599, y: 0, z: 3.61125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &72989974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1526,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &331264287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2512387470528047718, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+    type: 3}
+  m_PrefabInstance: {fileID: 331264285}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &332374253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &436358033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1826,13 +1885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraToFace: {fileID: 0}
   m_ObjectPrefabs:
-  - {fileID: 8986328500875594450, guid: d825bbdf58c379d4290da92e387f71d0, type: 3}
-  - {fileID: 7657548977611231357, guid: 3cbfcd4079a5031478389d5ab3c8c311, type: 3}
-  - {fileID: 3555902977704940904, guid: 23412048bf4821d4f8bf5c7d9c1abd5b, type: 3}
-  - {fileID: 5419581123709780336, guid: aaf6326249753074fbc1148303020f26, type: 3}
-  - {fileID: 7279467769842343898, guid: b1b37ac0eaa6a9a4785fc1f26065e8b3, type: 3}
-  - {fileID: 3745605318107395163, guid: daca7e1cd0a975941a64a8a9cbd8e5e5, type: 3}
-  - {fileID: 2668992677333385299, guid: 98cdacc32bf0d8d469092762a7263c4b, type: 3}
+  - {fileID: 8986328500875594450, guid: 4b9665ae975bf7f46948825601b10570, type: 3}
   m_SpawnVisualizationPrefab: {fileID: 0}
   m_SpawnOptionIndex: 0
   m_OnlySpawnInView: 1
@@ -3348,6 +3401,7 @@ GameObject:
   - component: {fileID: 762140203}
   - component: {fileID: 762140205}
   - component: {fileID: 762140204}
+  - component: {fileID: 762140206}
   m_Layer: 5
   m_Name: potim
   m_TagString: Untagged
@@ -3409,6 +3463,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762140202}
   m_CullTransparentMesh: 1
+--- !u!114 &762140206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762140202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9d3ec4d24919a4db6093aaf42cbe6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragUIAndPlaceAR
+  arRaycastManager: {fileID: 331264287}
+  arPrefabToPlace: {fileID: 8986328500875594450, guid: 4b9665ae975bf7f46948825601b10570,
+    type: 3}
+  targetTagName: Untagged
+  inv: {fileID: 137007869}
+  draggableRectTransform: {fileID: 762140203}
+  parentCanvas: {fileID: 1455665603}
 --- !u!1 &791333383
 GameObject:
   m_ObjectHideFlags: 0
@@ -9834,6 +9907,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantPot
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d355817f83b2de488e53caf13751148,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9860,6 +9938,7 @@ GameObject:
   - component: {fileID: 1731820553}
   - component: {fileID: 1731820555}
   - component: {fileID: 1731820554}
+  - component: {fileID: 1731820556}
   m_Layer: 5
   m_Name: tomseedim
   m_TagString: Untagged
@@ -9921,6 +10000,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731820552}
   m_CullTransparentMesh: 1
+--- !u!114 &1731820556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731820552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9d3ec4d24919a4db6093aaf42cbe6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragUIAndPlaceAR
+  arRaycastManager: {fileID: 331264287}
+  arPrefabToPlace: {fileID: 1079990674378640961, guid: fb4c648faf675aa48bb4ac2843abfe8e,
+    type: 3}
+  targetTagName: Pot
+  inv: {fileID: 137007869}
+  draggableRectTransform: {fileID: 1731820553}
+  parentCanvas: {fileID: 1455665603}
 --- !u!1 &1756045394
 GameObject:
   m_ObjectHideFlags: 0
@@ -11234,6 +11332,7 @@ GameObject:
   - component: {fileID: 1960825772}
   - component: {fileID: 1960825774}
   - component: {fileID: 1960825773}
+  - component: {fileID: 1960825775}
   m_Layer: 5
   m_Name: sunseedim
   m_TagString: Untagged
@@ -11295,6 +11394,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960825771}
   m_CullTransparentMesh: 1
+--- !u!114 &1960825775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960825771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9d3ec4d24919a4db6093aaf42cbe6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragUIAndPlaceAR
+  arRaycastManager: {fileID: 331264287}
+  arPrefabToPlace: {fileID: 4640506395558067851, guid: 4bbdbbc4f53f7ca4d93c394841e3cd33,
+    type: 3}
+  targetTagName: Pot
+  inv: {fileID: 137007869}
+  draggableRectTransform: {fileID: 1960825772}
+  parentCanvas: {fileID: 1455665603}
 --- !u!1 &1962116422
 GameObject:
   m_ObjectHideFlags: 0
@@ -13059,3 +13177,4 @@ SceneRoots:
   - {fileID: 900163123}
   - {fileID: 409082208}
   - {fileID: 1455665604}
+  - {fileID: 72725660}
