@@ -23,15 +23,12 @@ public class ProduceScript : MonoBehaviour
 	{
 		AgeUp();
 
-		if (maxAge && harvest)
+		if (growthAges.Length > 0)
 		{
-			// produce is ready to be harvested, do something here 
-			Harvest();
-			return;
-		}
-		else if (age >= growthAges[growthStage])
-		{
-			Grow();
+			if (age >= growthAges[growthStage])
+			{
+				Grow();
+			}
 		}
 		// update produce stuff
 	}
@@ -67,9 +64,19 @@ public class ProduceScript : MonoBehaviour
 		else GetComponent<MeshFilter>().mesh = myProduceData.getProduceMesh(growthStage - 1);
 	}
 
+	public void TryHarvest()
+	{
+		Debug.Log(name + " Is trying to be Harvested");
+		if (maxAge || growthAges.Length == 0)
+		{
+			Harvest();
+		}
+	}
+
 	private void Harvest()
 	{
-		Inventory.Instance.Currency += produceValue; // add the produce value to the inventory currency
+		Debug.Log(name + " Is going to be harvested");
 		harvested = true; // mark the produce as harvested
+		Inventory.Instance.Currency += produceValue; // add the produce value to the inventory currency
 	}
 }

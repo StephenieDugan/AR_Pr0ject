@@ -24,6 +24,7 @@ public class PlantScript : MonoBehaviour
 	[SerializeField] private int maxHarvestAmount; // maximum amount of produce that can be harvested before plant is destroyed
 	private int harvestCount = 0; // count of how many produce have been harvested
 	private bool fertilize = false;
+	public bool doneHarvesting { get { return (harvestCount >= maxHarvestAmount); } }
 	[SerializeField] private float fertilizeAmount; // amount of age to add when fertilizing
 
 	public void PlantUpdate()
@@ -32,7 +33,7 @@ public class PlantScript : MonoBehaviour
 
 		if (fertilize) { age += fertilizeAmount; fertilize = false; }
 
-		if (maxAge && produces.Count < maxProducesCount && !addingProduce) { Invoke("AddProduce", Random.Range(produceMinTimeBetweenGrowth, produceMaxTimeBetweenGrowth)); addingProduce = true;  }
+		if (maxAge && produces.Count < maxProducesCount && (produces.Count + harvestCount) < maxHarvestAmount && !addingProduce) { Invoke("AddProduce", Random.Range(produceMinTimeBetweenGrowth, produceMaxTimeBetweenGrowth)); addingProduce = true;  }
 		else if (age >= growthAges[growthStage])
 		{
 			Grow();
@@ -60,10 +61,10 @@ public class PlantScript : MonoBehaviour
 			}
 		}
 
-		if (harvestCount >= maxHarvestAmount)
+		if (doneHarvesting)
 		{
 			// destroy the plant if the harvest count exceeds the maximum harvest amount
-			
+
 			Destroy(gameObject);
 			return;
 		}

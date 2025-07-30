@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TomatoProduce
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d1003fff1c3b91349b9fb7717b9ecb2c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -91,6 +96,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5046931059902757111}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1003fff1c3b91349b9fb7717b9ecb2c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -9130563173952223537}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1003fff1c3b91349b9fb7717b9ecb2c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825911469068806605}
   m_SourcePrefab: {fileID: 100100000, guid: d1003fff1c3b91349b9fb7717b9ecb2c, type: 3}
 --- !u!1 &3996779109262460089 stripped
 GameObject:
@@ -112,9 +125,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProduceScript
   age: 0
   growthStage: 0
-  growthRate: 1
+  growthRate: 5
   growthAges: 0200000004000000
   harvest: 0
-  maxGrowthRate: 2
+  maxGrowthRate: 5
   produceValue: 5
   myProduceData: {fileID: 11400000, guid: 1b6d7b07540789a42a8e7f40a57b8250, type: 2}
+--- !u!54 &-9130563173952223537
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996779109262460089}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1825911469068806605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996779109262460089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1385772, y: 0.1800374, z: 0.13482873}
+  m_Center: {x: -0.027267165, y: -0.04174792, z: -0.0030370206}

@@ -7,8 +7,22 @@ public class GardenScipt : MonoBehaviour
 
 	void Update()
     {
-        if (plants.Count.Equals(0)) return;
-		else foreach (var plant in plants) plant.PlantUpdate();
+        if (plants.Count == 0)
+        {
+            return;
+        }
+        else
+        {
+			foreach (var plant in plants)
+            {
+                if (!plant.doneHarvesting)
+                {
+                    plant.PlantUpdate();
+                }
+            }
+
+            plants.RemoveAll((PlantScript p) => p == null);
+        }
         // Update the plants using the PlantUpdate method. so this object is sync in updates with its plant
     }
 
