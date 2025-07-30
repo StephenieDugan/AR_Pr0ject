@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlantScript : MonoBehaviour
 {
 	[SerializeField] private float age = 0; // this will not be serialized, but for testing, it is serialized for now
+	[SerializeField] private float maxWater; // maximum age of the plant, after which it will not grow anymore, but produce will start to grow
 	[SerializeField] private float water = 0; // this will not be serialized, but for testing, it is serialized for now
 	[SerializeField] private float consumptionRate;
 	[SerializeField] private int[] growthAges; // the age at which the plant will grow to the next stage
@@ -22,10 +23,14 @@ public class PlantScript : MonoBehaviour
 	private bool addingProduce = false; // flag to check if we are currently adding produce
 	[SerializeField] private int maxHarvestAmount; // maximum amount of produce that can be harvested before plant is destroyed
 	private int harvestCount = 0; // count of how many produce have been harvested
+	private bool fertilize = false;
+	[SerializeField] private float fertilizeAmount; // amount of age to add when fertilizing
 
 	public void PlantUpdate()
 	{
 		AgeUp();
+
+		if (fertilize) { age += fertilizeAmount; fertilize = false; }
 
 		if (maxAge && produces.Count < maxProducesCount && !addingProduce) { Invoke("AddProduce", Random.Range(produceMinTimeBetweenGrowth, produceMaxTimeBetweenGrowth)); addingProduce = true;  }
 		else if (age >= growthAges[growthStage])
@@ -116,5 +121,19 @@ public class PlantScript : MonoBehaviour
 			GetComponent<MeshFilter>().mesh = myPlantData.getPlantMesh(growthStage);
 		}
 		else GetComponent<MeshFilter>().mesh = myPlantData.getPlantMesh(growthStage - 1);
+	}
+
+	public void Water(float amount)
+	{
+		if (water + amount > maxWater) // check if the water level exceeds the maximum water level
+		{
+			water = maxWater; // cap the water level at maximum
+		}
+		else water += amount; // increase the water level by the amount passed in
+	}
+
+	public void Fertilize()
+	{
+		fertilize = true;
 	}
 }

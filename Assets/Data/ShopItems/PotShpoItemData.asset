@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d106ae1a1ee0eb04a9b8f3124f410df1, type: 3}
+  m_Name: PotShpoItemData
+  m_EditorClassIdentifier: Assembly-CSharp::ShopItemDataSO
+  itemName: Pot
+  itemType: 2
+  itemPrice: 2
+  itemMesh: {fileID: -3562493664714919950, guid: 9d355817f83b2de488e53caf13751148,
+    type: 3}
+  itemMaterial: {fileID: 2100000, guid: bcaef9a7af8383a4b92981a2fcc60224, type: 2}
+  scale: 0.7
