@@ -24,6 +24,8 @@ public class DragUIAndPlaceAR : MonoBehaviour, IPointerDownHandler, IDragHandler
     private GameObject currentDraggedPrefabInstance; // Instance of the AR prefab currently being dragged
     private static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
+    [SerializeField] private LayerMask whoIHit;
+
     void Start()
     {
         if (draggableRectTransform == null)
@@ -56,6 +58,20 @@ public class DragUIAndPlaceAR : MonoBehaviour, IPointerDownHandler, IDragHandler
         // Instantiate the AR prefab as a temporary preview, if needed
         // For this example, we'll instantiate on release (OnEndDrag)
         // You could instantiate a "ghost" object here and move it with OnDrag
+
+        RaycastHit hit;
+        Ray raypos = Camera.main.ScreenPointToRay(eventData.position);
+        Physics.Raycast(raypos, out hit, 1000.0f, whoIHit);
+        Debug.DrawRay(raypos.origin, raypos.direction, Color.aliceBlue, 5.0f);
+
+
+        if (hit.rigidbody)
+        {
+            if (hit.rigidbody.GetComponent<ProduceScript>())
+            {
+                hit.rigidbody.GetComponent<ProduceScript>().TryHarvest();
+            }
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
