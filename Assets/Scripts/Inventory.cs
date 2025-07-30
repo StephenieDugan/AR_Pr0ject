@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -29,18 +30,31 @@ public class Inventory : MonoBehaviour
 	#endregion
 	// use Inventory.Instance to access the singleton instance
 
+	[SerializeField] private TextMeshProUGUI currencyText;
+	[SerializeField] private TextMeshProUGUI tomatoSeedText;
+	[SerializeField] private TextMeshProUGUI sunflowerSeedText;
+	[SerializeField] private TextMeshProUGUI potText;
+
+	private void Start()
+	{
+		currencyText.text = "Fruits: " + currency;
+		potText.text = pots.ToString();
+		tomatoSeedText.text = tomatoSeeds.ToString();
+		sunflowerSeedText.text = sunflowerSeeds.ToString();
+	}
+
 	private int currency = 0; // current currency amount
 	public int Currency
 	{
 		get { return currency; }
-		set { currency = value; }
+		set { currency = value; currencyText.text = "Fruits: " + currency; }
 	}
 
 	private int pots = 1; // current number of pots available
 	public int Pots
 	{
 		get { return pots; }
-		set { pots = value; }
+		set { pots = value; potText.text = pots.ToString(); }
 	}
 
 	private int fertilizer = 0; // current amount of fertilizer available
@@ -50,39 +64,17 @@ public class Inventory : MonoBehaviour
 		set { fertilizer = value; }
 	}
 
-	private List<SeedScript> seeds = new List<SeedScript>(); // list of seeds in the inventory
-	private List<SeedScript> tomatoSeeds = new List<SeedScript>(); // list of tomato seeds in the inventory
-	public SeedScript GetTomatoSeed
+	private int tomatoSeeds = 1;
+	public int TomatoSeeds
 	{
-		get { return tomatoSeeds.Count > 0 ? tomatoSeeds[0] : null; } // returns the first tomato seed if available
-	}
-	public int TomatoSeedCount
-	{
-		get { return tomatoSeeds.Count; } // returns the count of tomato seeds
-	}
-	private List<SeedScript> sunflowerSeeds = new List<SeedScript>(); // list of tomato seeds in the inventory
-	public SeedScript GetSunflowerSeed
-	{
-		get { return sunflowerSeeds.Count > 0 ? sunflowerSeeds[0] : null; } // returns the first sunflower seed if available
-	}
-	public int SunflowerSeedCount
-	{
-		get { return sunflowerSeeds.Count; } // returns the count of sunflower seeds
-	}
+		get { return tomatoSeeds; }
+		set { tomatoSeeds = value; tomatoSeedText.text = tomatoSeeds.ToString(); }
+	}	
 
-	public void AddSeed(SeedScript seed)
+	private int sunflowerSeeds = 0;
+	public int SunflowerSeeds
 	{
-		seeds.Add(seed); // add seed to the inventory
-	}
-
-	private List<SeedScript> GetSeedsOfType(SeedDataSO.SeedType seedType)
-	{
-		return seeds.FindAll(seed => seed.GetSeedData().GetSeedType() == seedType); // find the first seed of the specified type
-	}
-
-	private void FixedUpdate()
-	{
-		tomatoSeeds = GetSeedsOfType(SeedDataSO.SeedType.TOMATO); // update the list of tomato seeds
-		sunflowerSeeds = GetSeedsOfType(SeedDataSO.SeedType.SUNFLOWER); // update the list of sunflower seeds
+		get { return sunflowerSeeds; }
+		set { sunflowerSeeds = value; sunflowerSeedText.text = sunflowerSeeds.ToString(); }
 	}
 }

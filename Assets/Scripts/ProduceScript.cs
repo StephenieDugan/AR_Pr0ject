@@ -13,6 +13,7 @@ public class ProduceScript : MonoBehaviour
 	[SerializeField] public bool harvest = false; // serialized for testing, will not be serialized in final version
 	[SerializeField] private float maxGrowthRate; // max rate at which the produce grows
 	[NonSerialized] public float water; // current water level, will be set by the plant script
+	[SerializeField] private int produceValue; // value of the produce when harvested
 
 	[NonSerialized] public int locationIndex; // index of the produce location in the plant script, will be set by the plant script
 
@@ -68,6 +69,7 @@ public class ProduceScript : MonoBehaviour
 
 	private void Harvest()
 	{
+		Inventory.Instance.Currency += produceValue; // add the produce value to the inventory currency
 		harvested = true; // mark the produce as harvested
 	}
 }
